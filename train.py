@@ -18,9 +18,9 @@ parser.add_argument('--model', type=str, default='Model',
                     help='model of experiment, options: [informer, informerstack, informerlight(TBD)]')
 parser.add_argument('--data', type=str, default='elec', help='data')
 parser.add_argument('--root_path', type=str,
-                    default='./data/ETT/', help='root path of the data file')
+                    default='./data/ETTh1/', help='root path of the data file')
 parser.add_argument('--data_path', type=str,
-                    default='elec2.csv', help='data file')  # 改文件名
+                    default='ETTh1.csv', help='data file')  # 改文件名
 parser.add_argument('--features', type=str, default='M',
                     help='forecasting task, options:[M, S, MS]; M:multivariate predict multivariate, S:univariate predict univariate, MS:multivariate predict univariate')
 parser.add_argument('--target', type=str, default='OT',
