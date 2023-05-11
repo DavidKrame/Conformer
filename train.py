@@ -144,7 +144,7 @@ print('Args in experiment:')
 print(args)
 Exp = Exp_Model
 
-pred_length = [48, 96, 192, 384, 768, 1536]
+pred_length = [96, 192, 384, 768]
 for i in range(len(pred_length)):
     all_mse = []
     all_mae = []
@@ -169,5 +169,7 @@ for i in range(len(pred_length)):
     #    print('>>>>>>>predicting : {}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'.format(setting))
     #    exp.predict(setting, True)
         torch.cuda.empty_cache()
-    print(np.mean(np.array(all_mse)), np.std(np.array(all_mse)),
-          np.mean(np.array(all_mae)), np.std(np.array(all_mae)))
+    print("MEANs :")
+    print(np.mean(np.array(all_mse)), np.mean(np.array(all_mae)))
+    print("STDs :")
+    print(np.std(np.array(all_mse)), np.std(np.array(all_mae)))
