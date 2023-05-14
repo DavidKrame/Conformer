@@ -36,7 +36,7 @@ class Model(nn.Module):
         self.pred_len = out_len
         self.attn = attn
         self.c_out = c_out
-        self.output_attention = output_attention
+        # self.output_attention = output_attention
         self.label_len = label_len
 
         self.distribution_dec_mu = nn.Linear(d_model, out_len)

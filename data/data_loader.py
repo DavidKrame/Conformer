@@ -242,15 +242,18 @@ class Dataset_elec(Dataset):
                         12*30*24*4+1*30*24*4 - self.seq_len]
             border2s = [12*30*24*4, 12*30*24*4+1*30*24*4, 12*30*24*4+2*30*24*4]
         elif self.data_set == 'ECL':  # 7/1/1
-            border1s = [0, 12*30*24 - self.seq_len,
-                        12*30*24+2*30*24 - self.seq_len]
-            border2s = [12*30*24, 12*30*24+2*30*24, 12*30*24+4*30*24]
+            # border1s = [0, 12*30*24 - self.seq_len,
+            #             12*30*24+2*30*24 - self.seq_len]
+            # border2s = [12*30*24, 12*30*24+2*30*24, 12*30*24+4*30*24]
+            border1s = [0, 12*30*24*4 - self.seq_len,
+                        12*30*24*4+2*30*24*4 - self.seq_len]
+            border2s = [12*30*24*4, 12*30*24*4+2*30*24*4, 12*30*24*4+4*30*24*4]
         elif self.data_set == 'WTH':  # 24/2/2
             # border1s = [0, 24*30*6*8 - self.seq_len, 24*30*6*8+6*30*24 - self.seq_len]
             # border2s = [24*30*6*8, 24*30*6*8+30*24*6, 24*30*6*8+6*30*24*2]
-            border1s = [0, 12*30*24 - self.seq_len,
-                        12*30*24+2*30*24 - self.seq_len]
-            border2s = [12*30*24, 12*30*24+2*30*24, 12*30*24+4*30*24]
+            border1s = [0, 7*30*24*6 - self.seq_len,
+                        7*30*24*6+2*30*24*6 - self.seq_len]
+            border2s = [7*30*24*6, 7*30*24*6+2*30*24*6, 7*30*24*6+4*30*24*6]
         elif self.data_set == 'TRAF':  # 15/3/3
             border1s = [0, 15*30*24 - self.seq_len,
                         15*30*24+3*30*24 - self.seq_len]
@@ -260,9 +263,12 @@ class Dataset_elec(Dataset):
                         12*30*24*4+1*30*24*4 - self.seq_len]
             border2s = [12*30*24*4, 12*30*24*4+1*30*24*4, 12*30*24*4+2*30*24*4]
         elif self.data_set == 'ETTh1':  # 12/2/2
-            border1s = [0, 12*30*24 - self.seq_len,
-                        12*30*24+2*30*24 - self.seq_len]
-            border2s = [12*30*24, 12*30*24+2*30*24, 12*30*24+4*30*24]
+            # border1s = [0, 12*30*24 - self.seq_len,
+            #             12*30*24+2*30*24 - self.seq_len]
+            # border2s = [12*30*24, 12*30*24+2*30*24, 12*30*24+4*30*24]
+            border1s = [0, 12*30*24*4 - self.seq_len,
+                        12*30*24*4+1*30*24*4 - self.seq_len]
+            border2s = [12*30*24*4, 12*30*24*4+1*30*24*4, 12*30*24*4+2*30*24*4]
         else:
             border1s = [0, 16*365 - self.seq_len, 16*365+2*365 - self.seq_len]
             border2s = [16*365, 16*365+2*365, 16*365+4*365]
